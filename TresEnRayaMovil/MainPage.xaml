@@ -4,202 +4,229 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
-    <Grid Margin="10">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
+    <AbsoluteLayout Margin="10">
 
-        <Grid x:Name="tablero" Grid.Column="0">
+        <Grid AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
 
-            <Image
-                Grid.RowSpan="3"
-                Grid.ColumnSpan="3"
-                Aspect="Fill"
-                Source="tablero.png" />
+            <Grid x:Name="tablero" Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
 
-            <ImageButton
-                x:Name="btn1"
-                Grid.Row="0"
-                Grid.Column="0"
-                Margin="20"
-                Background="Transparent"
-                Clicked="Button_Click" />
-            <ImageButton
-                x:Name="btn2"
-                Grid.Row="0"
+                <Image
+                    Grid.RowSpan="3"
+                    Grid.ColumnSpan="3"
+                    Aspect="Fill"
+                    Source="tablero.png" />
+
+                <ImageButton
+                    x:Name="btn1"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Margin="20"
+                    Background="Transparent"
+                    Clicked="Button_Click" />
+                <ImageButton
+                    x:Name="btn2"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Margin="20"
+                    Background="Transparent"
+                    Clicked="Button_Click" />
+                <ImageButton
+                    x:Name="btn3"
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    Margin="20"
+                    Background="Transparent"
+                    Clicked="Button_Click" />
+                <ImageButton
+                    x:Name="btn4"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Margin="20"
+                    Background="Transparent"
+                    Clicked="Button_Click" />
+                <ImageButton
+                    x:Name="btn5"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="20"
+                    Background="Transparent"
+                    Clicked="Button_Click" />
+                <ImageButton
+                    x:Name="btn6"
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    Margin="20"
+                    Background="Transparent"
+                    Clicked="Button_Click" />
+                <ImageButton
+                    x:Name="btn7"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Margin="20"
+                    Background="Transparent"
+                    Clicked="Button_Click" />
+                <ImageButton
+                    x:Name="btn8"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Margin="20"
+                    Background="Transparent"
+                    Clicked="Button_Click" />
+                <ImageButton
+                    x:Name="btn9"
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    Margin="20"
+                    Background="Transparent"
+                    Clicked="Button_Click" />
+
+            </Grid>
+
+
+            <StackLayout
                 Grid.Column="1"
-                Margin="20"
-                Background="Transparent"
-                Clicked="Button_Click" />
-            <ImageButton
-                x:Name="btn3"
-                Grid.Row="0"
-                Grid.Column="2"
-                Margin="20"
-                Background="Transparent"
-                Clicked="Button_Click" />
-            <ImageButton
-                x:Name="btn4"
-                Grid.Row="1"
-                Grid.Column="0"
-                Margin="20"
-                Background="Transparent"
-                Clicked="Button_Click" />
-            <ImageButton
-                x:Name="btn5"
-                Grid.Row="1"
-                Grid.Column="1"
-                Margin="20"
-                Background="Transparent"
-                Clicked="Button_Click" />
-            <ImageButton
-                x:Name="btn6"
-                Grid.Row="1"
-                Grid.Column="2"
-                Margin="20"
-                Background="Transparent"
-                Clicked="Button_Click" />
-            <ImageButton
-                x:Name="btn7"
-                Grid.Row="2"
-                Grid.Column="0"
-                Margin="20"
-                Background="Transparent"
-                Clicked="Button_Click" />
-            <ImageButton
-                x:Name="btn8"
-                Grid.Row="2"
-                Grid.Column="1"
-                Margin="20"
-                Background="Transparent"
-                Clicked="Button_Click" />
-            <ImageButton
-                x:Name="btn9"
-                Grid.Row="2"
-                Grid.Column="2"
-                Margin="20"
-                Background="Transparent"
-                Clicked="Button_Click" />
-
-        </Grid>
-
-
-        <StackLayout
-            Grid.Column="1"
-            Spacing="5"
-            VerticalOptions="FillAndExpand">
-            <Label
-                Margin="0,30,0,10"
-                FontAttributes="Bold"
-                FontFamily="Comic Sans MS"
-                FontSize="30"
-                HorizontalOptions="Center"
-                Text="Tres en raya" />
-            <Label
-                FontAttributes="Bold"
-                FontFamily="Comic Sans MS"
-                HorizontalOptions="Center"
-                Text="Turno" />
-            <Frame
-                Padding="5"
-                BackgroundColor="Transparent"
-                WidthRequest="170">
+                Spacing="5"
+                VerticalOptions="FillAndExpand">
                 <Label
-                    x:Name="turno"
+                    Margin="0,30,0,10"
                     FontAttributes="Bold"
                     FontFamily="Comic Sans MS"
-                    FontSize="20"
+                    FontSize="30"
                     HorizontalOptions="Center"
-                    HorizontalTextAlignment="Center"
-                    VerticalTextAlignment="Center" />
-            </Frame>
-            <!--<Label
+                    Text="Tres en raya" />
+                <Label
+                    FontAttributes="Bold"
+                    FontFamily="Comic Sans MS"
+                    HorizontalOptions="Center"
+                    Text="Turno" />
+                <Frame
+                    Padding="5"
+                    BackgroundColor="Transparent"
+                    WidthRequest="170">
+                    <Label
+                        x:Name="turno"
+                        FontAttributes="Bold"
+                        FontFamily="Comic Sans MS"
+                        FontSize="20"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center" />
+                </Frame>
+                <!--<Label
                 FontAttributes="Bold"
                 FontFamily="Comic Sans MS"
                 HorizontalOptions="Center"
                 Text="Resultados" />-->
-            <Grid Margin="0,20,0,0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <StackLayout Grid.Column="0" Spacing="10">
-                    <Label
-                        FontAttributes="Bold"
-                        FontFamily="Comic Sans MS"
-                        HorizontalOptions="Center"
-                        Text="Jugador X" />
-                    <Frame
-                        Padding="0"
-                        BackgroundColor="Transparent"
-                        WidthRequest="80">
+                <Grid Margin="0,20,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Grid.Column="0" Spacing="10">
                         <Label
-                            x:Name="resultadoX"
                             FontAttributes="Bold"
                             FontFamily="Comic Sans MS"
-                            FontSize="35"
-                            HorizontalTextAlignment="Center"
-                            Text="0" />
-                    </Frame>
-                    <Button
-                        x:Name="NuevoJuego"
-                        Margin="10,10,10,0"
-                        BackgroundColor="Green"
-                        Clicked="NuevoJuego_Click"
-                        FontAttributes="Bold"
-                        FontFamily="Comic Sans MS"
-                        HeightRequest="40"
-                        Text="Nuevo Juego" />
-                </StackLayout>
-                <StackLayout Grid.Column="1" Spacing="10">
-                    <Label
-                        FontAttributes="Bold"
-                        FontFamily="Comic Sans MS"
-                        HorizontalOptions="Center"
-                        Text="Jugador 0" />
-                    <Frame
-                        Padding="0"
-                        BackgroundColor="Transparent"
-                        WidthRequest="80">
-                        <Label
-                            x:Name="resultadoO"
+                            HorizontalOptions="Center"
+                            Text="Jugador X" />
+                        <Frame
+                            Padding="0"
+                            BackgroundColor="Transparent"
+                            WidthRequest="80">
+                            <Label
+                                x:Name="resultadoX"
+                                FontAttributes="Bold"
+                                FontFamily="Comic Sans MS"
+                                FontSize="35"
+                                HorizontalTextAlignment="Center"
+                                Text="0" />
+                        </Frame>
+                        <Button
+                            x:Name="NuevoJuego"
+                            Margin="10,10,10,0"
+                            BackgroundColor="Green"
+                            Clicked="NuevoJuego_Click"
                             FontAttributes="Bold"
                             FontFamily="Comic Sans MS"
-                            FontSize="35"
-                            HorizontalTextAlignment="Center"
-                            Text="0" />
-                    </Frame>
-                    <Button
-                        x:Name="RestablecerResultados"
-                        Margin="10,10,10,0"
-                        BackgroundColor="Red"
-                        Clicked="RestablecerResultados_Click"
-                        FontAttributes="Bold"
-                        FontFamily="Comic Sans MS"
-                        HeightRequest="40"
-                        Text="Marcadores a 0" />
-                </StackLayout>
-            </Grid>
-            <Label
-                Margin="12,0"
-                FontSize="10"
-                HorizontalOptions="End"
-                Text="Creado con .NET MAUI 16/09/2023 Fran Díaz"
-                TextColor="Gray"
-                VerticalOptions="EndAndExpand" />
-        </StackLayout>
+                            HeightRequest="40"
+                            Text="Nuevo Juego" />
+                    </StackLayout>
+                    <StackLayout Grid.Column="1" Spacing="10">
+                        <Label
+                            FontAttributes="Bold"
+                            FontFamily="Comic Sans MS"
+                            HorizontalOptions="Center"
+                            Text="Jugador 0" />
+                        <Frame
+                            Padding="0"
+                            BackgroundColor="Transparent"
+                            WidthRequest="80">
+                            <Label
+                                x:Name="resultadoO"
+                                FontAttributes="Bold"
+                                FontFamily="Comic Sans MS"
+                                FontSize="35"
+                                HorizontalTextAlignment="Center"
+                                Text="0" />
+                        </Frame>
+                        <Button
+                            x:Name="RestablecerResultados"
+                            Margin="10,10,10,0"
+                            BackgroundColor="Red"
+                            Clicked="RestablecerResultados_Click"
+                            FontAttributes="Bold"
+                            FontFamily="Comic Sans MS"
+                            HeightRequest="40"
+                            Text="Marcadores a 0" />
+                    </StackLayout>
+                </Grid>
+                <Label
+                    Margin="12,0"
+                    FontSize="10"
+                    HorizontalOptions="End"
+                    Text="Creado con .NET MAUI 16/09/2023 Fran Díaz"
+                    TextColor="Gray"
+                    VerticalOptions="EndAndExpand" />
+            </StackLayout>
+        </Grid>
 
-    </Grid>
+        <Frame
+            x:Name="winnerFrame"
+            Padding="50"
+            AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            BackgroundColor="White"
+            BorderColor="Red"
+            IsVisible="false">
+            <StackLayout Spacing="20">
+                <Label
+                    x:Name="ganador"
+                    FontAttributes="Bold"
+                    FontSize="40"
+                    HorizontalTextAlignment="Center"
+                    Text="GANADOR"
+                    TextColor="Black" />
+                <Label
+                    x:Name="winner"
+                    FontAttributes="Bold"
+                    FontSize="50"
+                    HorizontalTextAlignment="Center"
+                    TextColor="Red" />
+            </StackLayout>
+        </Frame>
 
+    </AbsoluteLayout>
 </ContentPage>
